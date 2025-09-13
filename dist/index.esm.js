@@ -1,0 +1,2 @@
+import"react";import{jsx as r,jsxs as e}from"react/jsx-runtime";var t=function(e){var t=e.children,i=e.onClick,n=e.variant;return r("button",{className:{primary:"bg-blue-500 text-white px-4 py-2 rounded",secondary:"bg-gray-500 text-white px-4 py-2 rounded"}[void 0===n?"primary":n],onClick:i,children:t})},i=function(t){var i=t.title,n=t.children;return e("div",{className:"border rounded p-4 shadow",children:[i&&r("h2",{className:"text-xl mb-2",children:i}),n]})};export{t as Button,i as Card};
+//# sourceMappingURL=index.esm.js.map
