@@ -1,0 +1,2 @@
+"use strict";require("react");var r=require("react/jsx-runtime");exports.Button=function(e){var t=e.children,i=e.onClick,n=e.variant,a=void 0===n?"primary":n;return r.jsx("button",{className:{primary:"bg-blue-500 text-white px-4 py-2 rounded",secondary:"bg-gray-500 text-white px-4 py-2 rounded"}[a],onClick:i,children:t})},exports.Card=function(e){var t=e.title,i=e.children;return r.jsxs("div",{className:"border rounded p-4 shadow",children:[t&&r.jsx("h2",{className:"text-xl mb-2",children:t}),i]})};
+//# sourceMappingURL=index.js.map
