@@ -1,0 +1,59 @@
+.button {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary variant */
+.primary {
+  background-color: var(--custom-color, #3b82f6); /* Blue-500 */
+  color: #ffffff;
+}
+
+/* Secondary variant */
+.secondary {
+  background-color: var(--custom-color, #6b7280); /* Gray-500 */
+  color: #ffffff;
+}
+
+/* Hover effects */
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+  opacity: 0;
+}
+
+/* Trigger ripple on click */
+.button:active .ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Ripple animation keyframes */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

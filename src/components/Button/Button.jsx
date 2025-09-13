@@ -1,13 +1,20 @@
-import React from 'react';
+import styles from './Button.module.css';
 
-const Button = ({ children, onClick, variant = 'primary' }) => {
-  const styles = {
-    primary: 'bg-blue-500 text-white px-4 py-2 rounded',
-    secondary: 'bg-gray-500 text-white px-4 py-2 rounded',
+const Button = ({ children, onClick, variant = 'primary', color }) => {
+  const handleClick = (e) => {
+    onClick?.(e);
   };
+
+  const buttonStyle = color ? { '--custom-color': color } : {};
+
   return (
-    <button className={styles[variant]} onClick={onClick}>
+    <button
+      className={`${styles.button} ${styles[variant]}`}
+      style={buttonStyle}
+      onClick={handleClick}
+    >
       {children}
+      <span className={styles.ripple} />
     </button>
   );
 };
