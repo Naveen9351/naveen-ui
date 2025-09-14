@@ -1,0 +1,762 @@
+.appContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.profileCard {
+    background: var(--background, linear-gradient(135deg, #ff6b6b, #ff8e53));
+    color: var(--color, white);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+      padding:10px;
+
+}
+
+.profileCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.profileCard img {
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+    border-radius: 10px;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileCard:hover img {
+    opacity: 1;
+}
+
+.profileCard h2 {
+
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.profileCard p {
+margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.productCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #16a34a);
+    border: 2px solid var(--border-color, #e0e0e0);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.productCard:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+.productCard img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover img {
+    transform: scale(1.02);
+}
+
+.productCard h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.productCard p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.productCard button {
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.productCard button:hover {
+    transform: translateY(-2px);
+}
+
+.productCard button:active {
+    transform: translateY(3px);
+}
+
+.eventCard {
+    background: var(--background, #f0f4f8);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-left: 5px solid var(--border-color, #007bff);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.eventCard:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.eventCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.eventCard p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.newsCard {
+    background: var(--background, #fff3cd);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+    overflow: hidden;
+}
+
+.newsCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.newsCard h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.newsCard p {
+    font-size: 14px;
+    line-height: 1.2;
+    line-break: anywhere;
+}
+
+.quoteCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #6b7280);
+    font-style: italic;
+    border: 1px dashed var(--border-color, #6b7280);
+    padding: 24px;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.quoteCard:hover {
+    border-color: #4b5563;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quoteCard p:first-child {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.quoteCard p:last-child {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.teamCard {
+    background: var(--background, #f9fafb);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.teamCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.teamCard h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.teamCard p:first-of-type {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.teamCard p:last-child {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.featureCard {
+    background: var(--background, linear-gradient(to right, #4b79a1, #283e51));
+    color: var(--color, white);
+    padding: 24px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.featureCard:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.featureCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.featureCard p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.blogCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #4b5563);
+    border: 1px solid var(--border-color, #e5e7eb);
+    padding: 16px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.blogCard:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.blogCard img {
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: filter 0.3s ease;
+}
+
+.blogCard:hover img {
+    filter: brightness(1.1);
+}
+
+.blogCard h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.blogCard p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contactCard {
+    background: var(--background, #e6f3fa);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.contactCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contactCard h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contactCard p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dynamicCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #4b5563);
+    border: 1px solid var(--border-color, #d1d5db);
+    padding: 16px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.dynamicCard:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.dynamicCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.dynamicCard p {
+    font-size: 14px;
+    line-height: 1.2;
+        margin: 0;
+    margin-bottom: 2px;
+}
+
+.dynamicCard img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dynamicCard:hover img {
+    transform: scale(1.05);
+}
+
+.dynamicCard ul {
+    margin-top: 8px;
+    margin-left: 0;
+}
+
+.dynamicCard ul li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.imageCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #374151);
+    overflow: hidden;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.imageCard:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imageCard img {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imageCard:hover img {
+    transform: scale(1.1);
+}
+
+.imageCard p {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.minimalCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #374151);
+    padding: 16px;
+    border-bottom: 2px solid var(--border-color, #007bff);
+    transition: border-bottom-width 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.minimalCard:hover {
+    border-bottom-width: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.minimalCard p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.socialCard {
+    background: var(--background, #f1f5f9);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.socialCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.socialCard .icon {
+    width: 48px;
+    height: 48px;
+    background: var(--icon-bg, #007bff);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.socialCard:hover .icon {
+    background: #0056b3;
+    transform: rotate(10deg);
+}
+
+.socialCard p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.socialCard p:last-child {
+    font-size: 14px;
+}
+
+.pricingCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #10b981);
+    border: 2px solid var(--border-color, #10b981);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricingCard::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #10b981, #059669, #10b981);
+    background-size: 400%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: borderGlow 5s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+.pricingCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pricingCard p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.pricingCard ul {
+    margin-top: 16px;
+    list-style:circle;
+}
+
+.pricingCard ul li {
+    width: 60%;
+    margin: 2px auto;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.reviewCard {
+    background: var(--background, #fef2f2);
+    color: var(--color, #4b5563);
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.reviewCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reviewCard p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.reviewCard p:nth-child(2) {
+    font-size: 16px;
+    color: #f59e0b;
+}
+
+.reviewCard p:last-child {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.statsCard {
+    background: var(--background, #111827);
+    color: var(--color, white);
+    padding: 24px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.statsCard:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.statsCard div p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.statsCard div p:last-child {
+    font-size: 14px;
+}
+
+.galleryCard {
+    background: var(--background, #ffffff);
+    color: var(--color, #4b5563);
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.galleryCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.galleryCard img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+.galleryCard img:nth-child(1) {
+    flex: 1;
+    grid-column: span 2;
+}
+
+.galleryCard img:nth-child(4) {
+    flex: 1;
+    grid-column: span 2;
+}
+
+.galleryCard img:nth-child(5) {
+    flex: 1;
+    grid-column: span 3;
+}
+
+.galleryCard:hover img {
+    filter: brightness(1.1);
+}
+
+.ctaCard {
+    background: var(--background, linear-gradient(to bottom, #ef4444, #b91c1c));
+    color: var(--color, white);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.ctaCard::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ef4444, #b91c1c, #ef4444);
+    background-size: 400%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: borderGlow 5s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+.ctaCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ctaCard button {
+    background: white;
+    color: #b91c1c;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ctaCard button:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+}
+
+.infoCard {
+    background: var(--background, #eff6ff);
+    color: var(--color, #4b5563);
+    border: 1px solid var(--border-color, #bfdbfe);
+    padding: 16px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.infoCard:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.infoCard h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.infoCard p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.testimonialCard {
+    background: var(--background, #f9fafb);
+    color: var(--color, #4b5563);
+    border-left: 4px solid var(--border-color, #8b5cf6);
+    padding: 16px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: var(--width, 300px);
+    height: var(--height, auto);
+}
+
+.testimonialCard:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialCard img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover img {
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.testimonialCard p:first-child {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.testimonialCard p:last-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 8px;
+}
