@@ -26,3 +26,8 @@ export { default as GalleryCard } from './components/Cards/GalleryCard';
 export { default as CTACard } from './components/Cards/CTACard';
 export { default as InfoCard } from './components/Cards/InfoCard';
 export { default as TestimonialCard } from './components/Cards/TestimonialCard';
+export { default as FilterableProductCards } from './components/Cards/FilterableProductCards/FilterableProductCards';
+
+
+
+export { default as FilterableTable } from './components/Tables/FilterableTable/FilterableTable';
