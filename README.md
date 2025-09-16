@@ -1,11 +1,12 @@
-The issue with the README file seems to be related to improper rendering of tables and code blocks, which can occur due to formatting errors in Markdown. Below, I'll provide a corrected and optimized version of the README file to ensure tables and code blocks render properly. I'll also address common issues like table alignment, code block syntax, and overall readability while maintaining the original content structure.
+Creator Naveen Sharma (Provaantech)
 
-### Corrected README for Naveen-UI
+### README for Naveen-UI
 
 ```markdown
 # Naveen-UI
-
 A customizable React UI component library featuring navigation bars, buttons, cards, and filterable tables/cards for modern web applications.
+
+
 
 ## Installation
 
