@@ -31,3 +31,6 @@ export { default as FilterableProductCards } from './components/Cards/Filterable
 
 
 export { default as FilterableTable } from './components/Tables/FilterableTable/FilterableTable';
+export { default as Footer1 } from './components/Footers/Footer1/Footer1';
+export { default as Footer2 } from './components/Footers/Footer2/Footer2';
+export { default as Footer3 } from './components/Footers/Footer3/Footer3';

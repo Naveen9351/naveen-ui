@@ -1,0 +1,38 @@
+.footer {
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.copyright p {
+  margin: 0;
+}
