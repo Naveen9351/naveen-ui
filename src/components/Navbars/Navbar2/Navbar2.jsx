@@ -1,34 +1,36 @@
+import React, { useState } from 'react';
 import styles from './Navbar2.module.css';
 
-const Navbar2 = ({ logoUrl, menuItems, color, backgroundColor }) => {
-  const navStyle = {
-    '--custom-color': color || '#ffffff',
-    '--custom-bg-color': backgroundColor || '#1a1a1a'
-  };
+const Navbar2 = ({ logo, brandName, menuItems, centerMenu = true }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className={styles.navbar} style={navStyle}>
-      <div className={styles.logo}>
-        <img src={logoUrl || 'https://via.placeholder.com/100x40'} alt="Logo" />
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <div className={styles.logoSection}>
+          {logo ? <img src={logo} alt={brandName} className={styles.logo} /> : <span className={styles.brand}>{brandName}</span>}
+        </div>
+
+        <button
+          className={styles.mobileToggle}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className={`${styles.hamburger} ${isMobileMenuOpen ? styles.active : ''}`} />
+        </button>
+
+        <ul className={`${styles.menu} ${centerMenu ? styles.centered : ''} ${isMobileMenuOpen ? styles.show : ''}`}>
+          {menuItems?.map((item, index) => (
+            <li key={index} className={styles.menuItem}>
+              <a href={item.link || '#'} className={styles.menuLink}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <div className={styles.actions}>
+          <button className={styles.loginBtn}>Login</button>
+          <button className={styles.signupBtn}>Sign Up</button>
+        </div>
       </div>
-      <ul className={styles.menu}>
-        {menuItems?.map((item, index) => (
-          <li key={index} className={styles.menuItem}>
-            <a href={item.link || '#'} className={styles.menuLink}>
-              {item.label}
-            </a>
-            {item.children && (
-              <ul className={styles.dropdown}>
-                {item.children.map((child, childIndex) => (
-                  <li key={childIndex} className={styles.dropdownItem}>
-                    <a href={child.link || '#'}>{child.label}</a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
     </nav>
   );
 };

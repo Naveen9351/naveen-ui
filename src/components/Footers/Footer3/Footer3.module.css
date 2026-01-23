@@ -1,57 +1,87 @@
 .footer {
-  padding: 2rem 0;
-  text-align: center;
+  background: var(--nv-text);
+  color: white;
+  padding: 80px 0 40px;
+  font-family: inherit;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.brand {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
 }
 
 .newsletter {
-  margin-bottom: 1.5rem;
-}
-
-.newsletterTitle {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.inputGroup {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 8px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .input {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 4px;
   flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--nv-radius);
+  padding: 12px 16px;
+  color: white;
+  outline: none;
+  transition: var(--nv-transition);
 }
 
-.subscribeButton {
-  padding: 0.5rem 1rem;
+.input:focus {
+  border-color: var(--nv-primary);
+}
+
+.subBtn {
+  background: var(--nv-primary);
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: var(--nv-radius);
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: var(--nv-transition);
 }
 
-.social {
+.subBtn:hover {
+  background: var(--nv-primary-hover);
+}
+
+.socials {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
 .socialIcon {
-  transition: color 0.3s ease;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: var(--nv-transition);
 }
 
-.copyright {
-  margin: 0;
+.socialIcon:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
 }
