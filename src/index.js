@@ -1,11 +1,16 @@
-export { default as Button } from './components/Button/Button';
+import './index.css';
 
+// Existing Components
+export { default as Button } from './components/Button/Button';
 export { default as Navbar1 } from './components/Navbars/Navbar1/Navbar1';
 export { default as Navbar2 } from './components/Navbars/Navbar2/Navbar2';
 export { default as Navbar3 } from './components/Navbars/Navbar3/Navbar3';
+export { default as FilterableTable } from './components/Tables/FilterableTable/FilterableTable';
+export { default as Footer1 } from './components/Footers/Footer1/Footer1';
+export { default as Footer2 } from './components/Footers/Footer2/Footer2';
+export { default as Footer3 } from './components/Footers/Footer3/Footer3';
 
-
-
+// Cards
 export { default as ProfileCard } from './components/Cards/ProfileCard';
 export { default as ProductCard } from './components/Cards/ProductCard';
 export { default as EventCard } from './components/Cards/EventCard';
@@ -28,9 +33,23 @@ export { default as InfoCard } from './components/Cards/InfoCard';
 export { default as TestimonialCard } from './components/Cards/TestimonialCard';
 export { default as FilterableProductCards } from './components/Cards/FilterableProductCards/FilterableProductCards';
 
+// New Components - Loaders
+export * from './components/Loaders/Loaders';
 
+// New Components - Feedback
+export * from './components/Feedback/Feedback';
 
-export { default as FilterableTable } from './components/Tables/FilterableTable/FilterableTable';
-export { default as Footer1 } from './components/Footers/Footer1/Footer1';
-export { default as Footer2 } from './components/Footers/Footer2/Footer2';
-export { default as Footer3 } from './components/Footers/Footer3/Footer3';
+// New Components - Forms
+export * from './components/Forms/Forms';
+
+// New Components - Overlays
+export * from './components/Overlays/Overlays';
+
+// New Components - Data Display
+export * from './components/DataDisplay/DataDisplay';
+
+// New Components - Navigation
+export * from './components/Navigation/Navigation';
+
+// New Components - Misc
+export * from './components/Misc/Misc';

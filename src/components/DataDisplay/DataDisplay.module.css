@@ -1,0 +1,132 @@
+.avatar {
+    border-radius: 50%;
+    background: var(--nv-bg-alt);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid var(--nv-border);
+}
+
+.sm {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+}
+
+.md {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.lg {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.initials {
+    font-weight: 600;
+    color: var(--nv-text-muted);
+}
+
+/* Accordion */
+.accordion {
+    border: 1px solid var(--nv-border);
+    border-radius: var(--nv-radius);
+}
+
+.accordionItem:not(:last-child) {
+    border-bottom: 1px solid var(--nv-border);
+}
+
+.accordionHeader {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 16px;
+}
+
+.accordionContent.show {
+    max-height: 500px;
+    padding: 16px;
+}
+
+.chevron {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* Tooltip */
+.tooltipContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltipContainer:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top {
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom {
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    right: 125%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    left: 125%;
+    top: 50%;
+    transform: translateY(-50%);
+}
